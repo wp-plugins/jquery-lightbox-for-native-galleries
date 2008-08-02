@@ -11,6 +11,10 @@ Makes the native WordPress galleries introduced in WordPress 2.5 use jQuery Ligh
 
 Makes the native WordPress galleries introduced in WordPress 2.5 use [jQuery Lightbox by balupton](http://plugins.jquery.com/project/jquerylightbox_bal) to display the fullsize images.
 
+**Demo**
+
+A demo is available at [this plugin's homepage](http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/).
+
 == Installation ==
 
 ###Updgrading From A Previous Version###
