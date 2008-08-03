@@ -34,8 +34,7 @@ class jQueryLightboxForNativeGalleries {
 	function jQueryLightboxForNativeGalleries() {
 		if ( is_admin() ) return;
 
-		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'jquery-lightbox', WP_CONTENT_URL . '/plugins/jquery-lightbox-for-native-galleries/jquery_lightbox/js/jquery.lightbox.packed.js', FALSE, '1.2.1-final' );
+		wp_enqueue_script( 'jquery-lightbox', WP_CONTENT_URL . '/plugins/jquery-lightbox-for-native-galleries/jquery_lightbox/js/jquery.lightbox.packed.js', array('jquery'), '1.2.1-final' );
 
 		add_action( 'wp_head', array(&$this, 'wp_head') );
 		add_filter( 'attachment_link', array(&$this, 'attachment_link'), 10, 2 );
@@ -60,7 +59,7 @@ class jQueryLightboxForNativeGalleries {
 		$post = get_post( $id );
 
 		if ( in_array( $post->post_mime_type, $mimetypes ) )
-			return wp_get_attachment_url( $id );
+			return wp_get_attachment_url( $id ); // Try wp_get_attachment_thumb_file() in the future perhaps
 		else
 			return $link;
 	}
