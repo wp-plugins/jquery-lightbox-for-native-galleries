@@ -5,7 +5,7 @@
 Plugin Name:  jQuery Lightbox For Native Galleries
 Plugin URI:   http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/
 Description:  Makes the native WordPress galleries introduced in WordPress 2.5 use <a href="http://plugins.jquery.com/project/jquerylightbox_bal">jQuery Lightbox by balupton</a> to display the fullsize images.
-Version:      1.0.0
+Version:      1.0.1
 Author:       Viper007Bond
 Author URI:   http://www.viper007bond.com/
 
@@ -32,9 +32,9 @@ class jQueryLightboxForNativeGalleries {
 
 	// Plugin initialization
 	function jQueryLightboxForNativeGalleries() {
-		if ( is_admin() ) return;
+		if ( is_admin() || !function_exists('plugins_url') ) return;
 
-		wp_enqueue_script( 'jquery-lightbox', WP_CONTENT_URL . '/plugins/jquery-lightbox-for-native-galleries/jquery_lightbox/js/jquery.lightbox.packed.js', array('jquery'), '1.2.1-final' );
+		wp_enqueue_script( 'jquery-lightbox', plugins_url('/jquery-lightbox-for-native-galleries/jquery_lightbox/js/jquery.lightbox.packed.js'), array('jquery'), '1.2.1-final' );
 
 		add_action( 'wp_head', array(&$this, 'wp_head') );
 		add_filter( 'attachment_link', array(&$this, 'attachment_link'), 10, 2 );
@@ -67,9 +67,5 @@ class jQueryLightboxForNativeGalleries {
 
 // Start this plugin once all other plugins are fully loaded
 add_action( 'plugins_loaded', create_function( '', 'global $jQueryLightboxForNativeGalleries; $jQueryLightboxForNativeGalleries = new jQueryLightboxForNativeGalleries();' ) );
-
-// For WordPress 2.5.x
-if ( !defined('WP_CONTENT_URL') )
-	define( 'WP_CONTENT_URL', get_option('siteurl') . '/wp-content');
 
 ?>

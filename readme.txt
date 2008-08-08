@@ -2,7 +2,7 @@
 Contributors: Viper007Bond
 Donate link: http://www.viper007bond.com/donate/
 Tags: lightbox, jquery, gallery
-Requires at least: 2.5
+Requires at least: 2.6
 Stable tag: trunk
 
 Makes the native WordPress galleries introduced in WordPress 2.5 use jQuery Lightbox by balupton to display the fullsize images.
@@ -52,6 +52,10 @@ Then just visit your admin area and activate the plugin. That's it!
 **See Also:** ["Installing Plugins" article on the WP Codex](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins)
 
 == ChangeLog ==
+
+**Version 1.0.1**
+
+* Better WordPress 2.6 support (i.e. when you have a moved plugins directory).
 
 **Version 1.0.0**
 
