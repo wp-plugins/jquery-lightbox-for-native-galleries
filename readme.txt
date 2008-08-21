@@ -53,6 +53,10 @@ Then just visit your admin area and activate the plugin. That's it!
 
 == ChangeLog ==
 
+**Version 1.0.2**
+
+* Remove the IE6 check. It's a horrible, horrible browser and it may not even work with this Lightbox, but that's not my problem.
+
 **Version 1.0.1**
 
 * Better WordPress 2.6 support (i.e. when you have a moved plugins directory).
