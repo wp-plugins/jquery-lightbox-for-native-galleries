@@ -42,7 +42,114 @@ http://plugins.jquery.com/project/issues/jquerylightbox_bal
 
 ----
 
+Options:
+
+	Name: 			colorBlend
+	Description: 	Should we support colorBlend?
+	Values:			null (default)		- Enabled only if colorBlend is already detected
+					true				- Include colorBlend and enable
+					false				- Don't support colorBlend
+	
+	Name: 			ie6_support
+	Description:	Should we support IE6
+	Values:			true (default)		- Support IE6
+					false				- Ignore IE6
+	
+	Name: 			ie6_upgrade
+	Description: 	Should we show an IE6 upgrade message for IE6 users
+	Values:			true (default)		- Yes
+					false				- No
+	
+	Name: 			show_linkback
+	Description: 	Show or hide the linkback up the top right corner
+	Values:			true (default)		- Show the linkback
+					false				- Hide the linkback
+	
+	Name: 			scroll
+	Description: 	How should scrolling be handled?
+	Values:			"follow" (default)	- Scroll with the user
+					"disabled"			- Don't allow scrolling
+					"ignore"			- Don't care for scrolling (leave lightbox at original position)
+	
+	Name: 			baseurl
+	Description: 	The baseurl to use to auto include the required files
+	Values: 		null (default)		- Autodetect
+					string				- A string of the manual baseurl to use
+			
+	Name: 			files
+	Description: 	The javascript object that contains the locations of the requred files,
+					used if you have renamed files.
+	Children: 		js.lightbox, js.colorBlend, css.lightbox, images.prev, images.next, images.blank, images.loading
+	
+	Name: 			text
+	Description: 	The javascript object that contains the text of various parts of the interface,
+					used if you want to do translations.
+	Children: 		image, of, close, closeInfo, download, help.close, help.interact, about.text, about.title, about.link
+	
+	Name: 			keys
+	Description: 	The javascript object that contains the key allocations for shortcuts,
+					used if youw ant to remap the shortcuts
+	Children: 		close, prev, next
+	
+	Name: 			opacity
+	Description: 	The opacity of the border
+	Values:			0.9 (default)		- Have the overlay at 90%
+	
+	Name: 			padding
+	Description:	The padding around the image, if you are using a custom padding you want to adjust this
+	Values:			null (default)		- Autodetect
+	
+	Name:			speed
+	Description:	The total amount of milliseconds it takes to perform transitions between images.
+	Values:			400					- Take 400 milliseconds
+	
+	Name:			rel
+	Description:	What to look for in the rel tag of links and images to detect if it should have a lightbox
+	Values:			"lightbox" (default)	- Look for rel="lightbox" by default
+	
+	Name: 			auto_relify
+	Description:	Should we do an initial rel scan to automaticly detect lightboxes?
+	Values:			true (default)		- Yes we should
+					false				- No we shouldn't
+
+----
+
+How to apply options?
+
+	There are two methods, one is through the link form, and the other is through the constructor.
+	Use the below examples to derive how it is used to hide the linkback, and translate "Image" to "Photo".
+	
+	Link method:
+		<script type="text/javascript" src="jquery_lightbox/js/jquery.lightbox.packed.js?show_linkback=false&amp;text.image=Photo"></script>
+		
+	Constructor method:
+		<script type="text/javascript" src="jquery_lightbox/js/jquery.lightbox.packed.js"></script>
+		<script type="text/javascript">$(function(){
+			$.Lightbox.construct({
+				show_linkback:	false,
+				text: {
+					image:		'Photo'
+				}
+			});
+		});</script>
+		
+	
+----
+
 Changelog:
+
+v1.3.0-rc1 (August 24, 2008)
+- Added colorBlend support, so if used, the background-color of the overlay will be that of the image.
+    colorBlend's page: http://plugins.jquery.com/project/colorBlend
+- IE6 support is now back
+    Upgrade message is optional with the "ie6_upgrade" option
+    IE6 support is optional with the "ie6_support" option
+- If the image is to big for the window, it is resized - also applies when resizing the window
+- "scroll" option is now set to "follow" by default, and a new mode "disabled" has been added.
+- Made it so that the image title is now a link to the image so that the image can be downloaded.
+- Refer to the readme.txt for how to use options and what they do.
+- Resize and reposition code has been redone, along with some of the showImage code.
+- Many more tweaks and changes, this is a huge release.
 
 v1.2.1-final (August 1, 2008)
 - Made it easier to apply options.files - No longer have to modifiy the js location within the jquery.lightbox.js file
@@ -50,7 +157,7 @@ v1.2.1-final (August 1, 2008)
 - Fixed safari CSS bug
     reported by rgnelson and noYet: http://plugins.jquery.com/node/3254 , http://plugins.jquery.com/node/3314
 - Fixed XP IE7 double flash bug
-	reported by sashabe and sheshnjak: http://plugins.jquery.com/node/1804
+    reported by sashabe and sheshnjak: http://plugins.jquery.com/node/1804
 
 v1.2.0-final (July 11, 2008)
 - Added support for the following options:

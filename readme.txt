@@ -53,9 +53,10 @@ Then just visit your admin area and activate the plugin. That's it!
 
 == ChangeLog ==
 
-**Version 1.0.2**
+**Version 1.1.0**
 
-* Remove the IE6 check. It's a horrible, horrible browser and it may not even work with this Lightbox, but that's not my problem.
+* Update jquery_lightbox package. It now supports resizing images that are too large as well as not disabling IE6 support.
+* Makes the lightbox gallery-aware, i.e. don't allow next/prev between image sets. Thanks to Benjamin "balupton" Lupton!
 
 **Version 1.0.1**
 
