@@ -4,27 +4,10 @@
 
 Plugin Name:  jQuery Lightbox For Native Galleries
 Plugin URI:   http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/
-Description:  Makes the native WordPress galleries introduced in WordPress 2.5 use <a href="http://plugins.jquery.com/project/jquerylightbox_bal">jQuery Lightbox by balupton</a> to display the fullsize images.
-Version:      1.1.0
+Description:  Makes the native WordPress galleries use a lightbox to display the fullsize images.
+Version:      2.0.0
 Author:       Viper007Bond
 Author URI:   http://www.viper007bond.com/
-
-**************************************************************************
-
-Copyright (C) 2008 Viper007Bond
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 **************************************************************************/
 
@@ -34,7 +17,8 @@ class jQueryLightboxForNativeGalleries {
 	function jQueryLightboxForNativeGalleries() {
 		if ( is_admin() || !function_exists('plugins_url') ) return;
 
-		wp_enqueue_script( 'jquery-lightbox', plugins_url('/jquery-lightbox-for-native-galleries/jquery_lightbox/js/jquery.lightbox.packed.js?ie6_upgrade=false'), array('jquery'), '1.3.1-rc1' );
+		wp_enqueue_script( 'jquery-lightbox-leandro-vieira-pinho', plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/js/jquery.lightbox-0.5.pack.js'), array('jquery'), '0.5' );
+		wp_enqueue_style(  'jquery-lightbox-leandro-vieira-pinho', plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/css/jquery.lightbox-0.5.css'), array(), '0.5', 'screen' );
 
 		add_action( 'wp_head', array(&$this, 'wp_head') );
 		add_filter( 'attachment_link', array(&$this, 'attachment_link'), 10, 2 );
@@ -42,8 +26,24 @@ class jQueryLightboxForNativeGalleries {
 
 
 	// Output the Javascript to create the Lightbox
-	function wp_head() {
-		echo '<script type="text/javascript">jQuery(document).ready(function(){ jQuery(".gallery").each(function(index, obj){ jQuery(obj).find("a").lightbox(); }); });</script>' . "\n";
+	function wp_head() { ?>
+<!-- jQuery Lightbox For Native Galleries v2.0.0 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<script type="text/javascript">
+// <![CDATA[
+	jQuery(document).ready(function($){
+		$(".gallery").each(function(index, obj){
+			$(obj).find("a").lightBox({
+				imageLoading:  "<?php echo js_escape( plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/images/lightbox-ico-loading.gif') ); ?>",
+				imageBtnClose: "<?php echo js_escape( plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/images/lightbox-btn-close.gif') ); ?>",
+				imageBtnPrev:  "<?php echo js_escape( plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/images/lightbox-btn-prev.gif') ); ?>",
+				imageBtnNext:  "<?php echo js_escape( plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/images/lightbox-btn-next.gif') ); ?>",
+				imageBlank:    "<?php echo js_escape( plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/images/lightbox-blank.gif') ); ?>",
+			});
+		});
+	});
+// ]]>
+</script>
+<?php
 	}
 
 
@@ -58,7 +58,11 @@ class jQueryLightboxForNativeGalleries {
 	}
 }
 
-// Start this plugin once all other plugins are fully loaded
-add_action( 'plugins_loaded', create_function( '', 'global $jQueryLightboxForNativeGalleries; $jQueryLightboxForNativeGalleries = new jQueryLightboxForNativeGalleries();' ) );
+// Start the plugin up
+add_action( 'init', 'jQueryLightboxForNativeGalleries' );
+function jQueryLightboxForNativeGalleries() {
+	global $jQueryLightboxForNativeGalleries;
+	$jQueryLightboxForNativeGalleries = new jQueryLightboxForNativeGalleries();
+}
 
 ?>

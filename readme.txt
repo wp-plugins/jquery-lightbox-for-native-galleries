@@ -3,13 +3,14 @@ Contributors: Viper007Bond
 Donate link: http://www.viper007bond.com/donate/
 Tags: lightbox, jquery, gallery
 Requires at least: 2.6
+Tested up to: 2.8
 Stable tag: trunk
 
-Makes the native WordPress galleries introduced in WordPress 2.5 use jQuery Lightbox by balupton to display the fullsize images.
+Makes the native WordPress galleries use a lightbox to display the fullsize images.
 
 == Description ==
 
-Makes the native WordPress galleries introduced in WordPress 2.5 use [jQuery Lightbox by balupton](http://plugins.jquery.com/project/jquerylightbox_bal) to display the fullsize images.
+Makes the native WordPress galleries use a lightbox to display the fullsize images. The lightbox used in this plugin is currently the [jQuery lightBox plugin by Leandro Vieira Pinho](http://leandrovieira.com/projects/jquery/lightbox/).
 
 **Demo**
 
@@ -23,35 +24,15 @@ To upgrade from a previous version of this plugin, delete the entire folder and 
 
 ###Installing The Plugin###
 
-Extract all files from the ZIP file, making sure to keep the file structure intact, and then upload it to `/wp-content/plugins/`.
-
-This should result in the following file structure:
-
-`- wp-content
-    - plugins
-        - jquery-lightbox-for-native-galleries
-            | jquery-lightbox-for-native-galleries.php
-            | readme.txt
-            - jquery_lightbox
-                | COPYING.txt
-                | FDL.txt
-                | readme.txt
-                - css
-                    | jquery.lightbox.css
-                    | jquery.lightbox.packed.css
-                - images
-                    | blank.gif
-                    | loading.gif
-                    | next.gif
-                    | prev.gif
-                - js
-                    | jquery.lightbox.packed.js`
-
-Then just visit your admin area and activate the plugin. That's it!
+Extract all files from the ZIP file, making sure to keep the file structure intact, and then upload it to `/wp-content/plugins/`. Then just visit your admin area and activate the plugin. That's it!
 
 **See Also:** ["Installing Plugins" article on the WP Codex](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins)
 
 == ChangeLog ==
+
+**Version 2.0.0**
+
+* Switched lightbox scripts as I was unhappy with the previous one.
 
 **Version 1.1.0**
 
