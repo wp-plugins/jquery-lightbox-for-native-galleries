@@ -5,7 +5,7 @@
 Plugin Name:  jQuery Lightbox For Native Galleries
 Plugin URI:   http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/
 Description:  Makes the native WordPress galleries use a lightbox to display the fullsize images.
-Version:      2.0.0
+Version:      2.0.1
 Author:       Viper007Bond
 Author URI:   http://www.viper007bond.com/
 
@@ -27,7 +27,7 @@ class jQueryLightboxForNativeGalleries {
 
 	// Output the Javascript to create the Lightbox
 	function wp_head() { ?>
-<!-- jQuery Lightbox For Native Galleries v2.0.0 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<!-- jQuery Lightbox For Native Galleries v2.0.1 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
 <script type="text/javascript">
 // <![CDATA[
 	jQuery(document).ready(function($){
@@ -37,7 +37,7 @@ class jQueryLightboxForNativeGalleries {
 				imageBtnClose: "<?php echo js_escape( plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/images/lightbox-btn-close.gif') ); ?>",
 				imageBtnPrev:  "<?php echo js_escape( plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/images/lightbox-btn-prev.gif') ); ?>",
 				imageBtnNext:  "<?php echo js_escape( plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/images/lightbox-btn-next.gif') ); ?>",
-				imageBlank:    "<?php echo js_escape( plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/images/lightbox-blank.gif') ); ?>",
+				imageBlank:    "<?php echo js_escape( plugins_url('/jquery-lightbox-for-native-galleries/jquery-lightbox/images/lightbox-blank.gif') ); ?>"
 			});
 		});
 	});

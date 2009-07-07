@@ -30,6 +30,10 @@ Extract all files from the ZIP file, making sure to keep the file structure inta
 
 == ChangeLog ==
 
+**Version 2.0.1**
+
+* Remove an extra comma that was breaking stupid Internet Explorer. Props [Troy](http://troycawley.com/).
+
 **Version 2.0.0**
 
 * Switched lightbox scripts as I was unhappy with the previous one.
