@@ -30,6 +30,10 @@ Extract all files from the ZIP file, making sure to keep the file structure inta
 
 == ChangeLog ==
 
+**Version 3.0.0**
+
+* Switch the awesome [ColorBox](http://colorpowered.com/colorbox/). It looks pretty and does large image resizing. Yay!
+
 **Version 2.0.1**
 
 * Remove an extra comma that was breaking stupid Internet Explorer. Props [Troy](http://troycawley.com/).
