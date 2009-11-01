@@ -30,6 +30,10 @@ Extract all files from the ZIP file, making sure to keep the file structure inta
 
 == ChangeLog ==
 
+**Version 3.1.0**
+
+* Don't do anything inside of feeds (i.e. modify the thumbnail links).
+
 **Version 3.0.1**
 
 * Fix spelling mistake on the ColorBox style ID.
