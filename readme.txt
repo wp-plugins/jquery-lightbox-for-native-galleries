@@ -1,6 +1,5 @@
 === jQuery Lightbox For Native Galleries ===
 Contributors: Viper007Bond
-Donate link: http://www.viper007bond.com/donate/
 Tags: lightbox, jquery, gallery
 Requires at least: 2.6
 Tested up to: 2.8
