@@ -6,11 +6,11 @@ Requires at least: 2.6
 Tested up to: 2.8
 Stable tag: trunk
 
-Makes the native WordPress galleries use a lightbox to display the fullsize images.
+Makes the native WordPress galleries use a lightbox script called ColorBox to display the fullsize images.
 
 == Description ==
 
-Makes the native WordPress galleries use a lightbox to display the fullsize images. The lightbox used in this plugin is currently the [jQuery lightBox plugin by Leandro Vieira Pinho](http://leandrovieira.com/projects/jquery/lightbox/).
+Makes the native WordPress galleries use a lightbox script called [ColorBox](http://colorpowered.com/colorbox/) to display the fullsize images right there in the page.
 
 **Demo**
 
