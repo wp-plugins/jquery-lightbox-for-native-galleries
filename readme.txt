@@ -30,7 +30,7 @@ Extract all files from the ZIP file, making sure to keep the file structure inta
 
 == ChangeLog ==
 
-**Version 3.1.0**
+**Version 3.0.2**
 
 * Don't do anything inside of feeds (i.e. modify the thumbnail links).
 
