@@ -29,6 +29,12 @@ Extract all files from the ZIP file, making sure to keep the file structure inta
 
 == ChangeLog ==
 
+**Version 3.1.0**
+
+* Update ColorBox to v1.3.3.
+* Include all five of the default ColorBox themes and add a settings page to pick between them.
+* Change the lightbox maxwidth and maxheight to 95% as I think it looks better.
+
 **Version 3.0.2**
 
 * Don't do anything inside of feeds (i.e. modify the thumbnail links).
