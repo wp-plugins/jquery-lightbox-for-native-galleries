@@ -29,6 +29,10 @@ Extract all files from the ZIP file, making sure to keep the file structure inta
 
 == ChangeLog ==
 
+**Version 3.1.1**
+
+* Update ColorBox to v1.3.4.
+
 **Version 3.1.0**
 
 * Update ColorBox to v1.3.3.
