@@ -2,7 +2,7 @@
 Contributors: Viper007Bond
 Tags: lightbox, jquery, gallery
 Requires at least: 2.6
-Tested up to: 2.8
+Tested up to: 2.9
 Stable tag: trunk
 
 Makes the native WordPress galleries use a lightbox script called ColorBox to display the fullsize images.
