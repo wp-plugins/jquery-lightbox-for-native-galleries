@@ -5,7 +5,7 @@
 Plugin Name:  jQuery Lightbox For Native Galleries
 Plugin URI:   http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/
 Description:  Makes the native WordPress galleries use a lightbox script called <a href="http://colorpowered.com/colorbox/">ColorBox</a> to display the fullsize images.
-Version:      3.1.1
+Version:      3.1.2
 Author:       Viper007Bond
 Author URI:   http://www.viper007bond.com/
 
@@ -32,11 +32,11 @@ class jQueryLightboxForNativeGalleries {
 		if ( !is_admin() ) {
 			wp_enqueue_script( 'colorbox', plugins_url( 'colorbox/jquery.colorbox-min.js', __FILE__ ), array( 'jquery' ), '1.3.4' );
 
-			wp_register_style( 'colorbox-theme1', plugins_url( 'colorbox/theme1/colorbox.css', __FILE__ ), array(), '1.3.3', 'screen' );
-			wp_register_style( 'colorbox-theme2', plugins_url( 'colorbox/theme2/colorbox.css', __FILE__ ), array(), '1.3.3', 'screen' );
-			wp_register_style( 'colorbox-theme3', plugins_url( 'colorbox/theme3/colorbox.css', __FILE__ ), array(), '1.3.3', 'screen' );
-			wp_register_style( 'colorbox-theme4', plugins_url( 'colorbox/theme4/colorbox.css', __FILE__ ), array(), '1.3.3', 'screen' );
-			wp_register_style( 'colorbox-theme5', plugins_url( 'colorbox/theme5/colorbox.css', __FILE__ ), array(), '1.3.3', 'screen' );
+			wp_register_style( 'colorbox-theme1', plugins_url( 'colorbox/theme1/colorbox.css', __FILE__ ), array(), '1.3.4', 'screen' );
+			wp_register_style( 'colorbox-theme2', plugins_url( 'colorbox/theme2/colorbox.css', __FILE__ ), array(), '1.3.4', 'screen' );
+			wp_register_style( 'colorbox-theme3', plugins_url( 'colorbox/theme3/colorbox.css', __FILE__ ), array(), '1.3.4', 'screen' );
+			wp_register_style( 'colorbox-theme4', plugins_url( 'colorbox/theme4/colorbox.css', __FILE__ ), array(), '1.3.4', 'screen' );
+			wp_register_style( 'colorbox-theme5', plugins_url( 'colorbox/theme5/colorbox.css', __FILE__ ), array(), '1.3.4', 'screen' );
 		}
 
 		// Create list of themes and their human readable names
@@ -79,12 +79,13 @@ class jQueryLightboxForNativeGalleries {
 
 	// Output the Javascript to create the Lightbox
 	function wp_head() { ?>
-<!-- jQuery Lightbox For Native Galleries v3.1.1 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<!-- jQuery Lightbox For Native Galleries v3.1.2 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
 <script type="text/javascript">
 // <![CDATA[
 	jQuery(document).ready(function($){
 		$(".gallery").each(function(index, obj){
-			$(obj).find("a").colorbox({rel:$(obj).attr("id"), maxWidth:"95%", maxHeight:"95%"});
+			var galleryid = Math.floor(Math.random()*10000);
+			$(obj).find("a").colorbox({rel:galleryid, maxWidth:"95%", maxHeight:"95%"});
 		});
 	});
 // ]]>
