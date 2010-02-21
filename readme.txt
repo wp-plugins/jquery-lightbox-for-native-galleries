@@ -21,6 +21,9 @@ Log into the administration area of your blog and click on Plugins -> Add New in
 
 == ChangeLog ==
 
+= Version 3.1.3 =
+* Update ColorBox to v1.3.6. See [it's changelog](http://colorpowered.com/colorbox/core/README).
+
 = Version 3.1.2 =
 * Remove IE PNG fixes as they require a full URL and it's not worth the trouble. Works well enough in IE8.
 * Change how groups of images are labeled (use a random number rather than the gallery's ID so it works with the Twenty Ten theme).
@@ -59,6 +62,9 @@ Log into the administration area of your blog and click on Plugins -> Add New in
 * Initial release.
 
 == Upgrade Notice ==
+
+= 3.1.3 =
+Works properly in Internet Explorer now and compatible with more WordPress themes. ColorBox script also updated.
 
 = 3.1.2 =
 Works properly in Internet Explorer now and compatible with more WordPress themes.
