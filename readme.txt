@@ -21,6 +21,9 @@ Log into the administration area of your blog and click on Plugins -> Add New in
 
 == ChangeLog ==
 
+= Version 3.1.4 =
+* Don't change the attachment link inside the admin area.
+
 = Version 3.1.3 =
 * Update ColorBox to v1.3.6. See [it's changelog](http://colorpowered.com/colorbox/core/README).
 

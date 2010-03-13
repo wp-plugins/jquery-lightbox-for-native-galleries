@@ -5,7 +5,7 @@
 Plugin Name:  jQuery Lightbox For Native Galleries
 Plugin URI:   http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/
 Description:  Makes the native WordPress galleries use a lightbox script called <a href="http://colorpowered.com/colorbox/">ColorBox</a> to display the fullsize images.
-Version:      3.1.3
+Version:      3.1.4
 Author:       Viper007Bond
 Author URI:   http://www.viper007bond.com/
 
@@ -97,7 +97,7 @@ class jQueryLightboxForNativeGalleries {
 	// Make the thumbnails link to the fullsize image rather than a Page with the medium sized image
 	function attachment_link( $link, $id ) {
 		// The lightbox doesn't function inside feeds obviously, so don't modify anything
-		if ( is_feed() )
+		if ( is_feed() || is_admin() )
 			return $link;
 
 		$post = get_post( $id );
