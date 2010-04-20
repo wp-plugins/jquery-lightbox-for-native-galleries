@@ -11,6 +11,10 @@ Makes the native WordPress galleries use a lightbox script called ColorBox to di
 
 Makes the native WordPress galleries use a lightbox script called [ColorBox](http://colorpowered.com/colorbox/) to display the fullsize images right there in the page. No modifications required.
 
+You can also make single non-`[gallery]` images use the lightbox by giving their links a class of "lightbox", like so:
+
+`<a href="..." class="lightbox"><img src="..." alt="..." /></a>`
+
 **Demo**
 
 A demo is available at [this plugin's homepage](http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/).
@@ -20,6 +24,9 @@ A demo is available at [this plugin's homepage](http://www.viper007bond.com/word
 Log into the administration area of your blog and click on Plugins -> Add New in the menu. Search for the name of this plugin and then click install on the right side, and then again in the pop-up window.
 
 == ChangeLog ==
+
+= Version 3.2.0 =
+* Make any link that has the class `lightbox` into a lightbox. No grouping or anything, at least for now.
 
 = Version 3.1.4 =
 * Don't change the attachment link inside the admin area.
