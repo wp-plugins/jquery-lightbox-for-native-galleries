@@ -25,6 +25,9 @@ Log into the administration area of your blog and click on Plugins -> Add New in
 
 == ChangeLog ==
 
+= Version 3.2.1 =
+* Update ColorBox to v1.3.8. See [it's changelog](http://colorpowered.com/colorbox/core/README).
+
 = Version 3.2.0 =
 * Make any link that has the class `lightbox` into a lightbox. No grouping or anything, at least for now.
 

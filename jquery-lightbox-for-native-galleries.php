@@ -5,7 +5,7 @@
 Plugin Name:  jQuery Lightbox For Native Galleries
 Plugin URI:   http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/
 Description:  Makes the native WordPress galleries use a lightbox script called <a href="http://colorpowered.com/colorbox/">ColorBox</a> to display the fullsize images.
-Version:      3.2.0
+Version:      3.2.1
 Author:       Viper007Bond
 Author URI:   http://www.viper007bond.com/
 
@@ -30,7 +30,7 @@ class jQueryLightboxForNativeGalleries {
 		add_action( 'admin_init',      array(&$this, 'register_setting') );
 
 		if ( !is_admin() ) {
-			wp_enqueue_script( 'colorbox', plugins_url( 'colorbox/jquery.colorbox-min.js', __FILE__ ), array( 'jquery' ), '1.3.6' );
+			wp_enqueue_script( 'colorbox', plugins_url( 'colorbox/jquery.colorbox-min.js', __FILE__ ), array( 'jquery' ), '1.3.8' );
 
 			wp_register_style( 'colorbox-theme1', plugins_url( 'colorbox/theme1/colorbox.css', __FILE__ ), array(), '1.3.6', 'screen' );
 			wp_register_style( 'colorbox-theme2', plugins_url( 'colorbox/theme2/colorbox.css', __FILE__ ), array(), '1.3.6', 'screen' );
