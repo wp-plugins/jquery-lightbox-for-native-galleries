@@ -2,7 +2,7 @@
 Contributors: Viper007Bond
 Tags: lightbox, jquery, gallery
 Requires at least: 2.6
-Tested up to: 3.0
+Tested up to: 3.1
 Stable tag: trunk
 
 Makes the native WordPress galleries use a lightbox script called ColorBox to display the fullsize images.
@@ -25,8 +25,11 @@ Log into the administration area of your blog and click on Plugins -> Add New in
 
 == ChangeLog ==
 
+= Version 3.2.2 =
+* Update ColorBox to v1.3.14 (see [it's changelog](http://colorpowered.com/colorbox/core/README)). Fixes functionality under WordPress 3.1.
+
 = Version 3.2.1 =
-* Update ColorBox to v1.3.8. See [it's changelog](http://colorpowered.com/colorbox/core/README).
+* Update ColorBox to v1.3.8 (see [it's changelog](http://colorpowered.com/colorbox/core/README)).
 
 = Version 3.2.0 =
 * Make any link that has the class `lightbox` into a lightbox. No grouping or anything, at least for now.
@@ -35,7 +38,7 @@ Log into the administration area of your blog and click on Plugins -> Add New in
 * Don't change the attachment link inside the admin area.
 
 = Version 3.1.3 =
-* Update ColorBox to v1.3.6. See [it's changelog](http://colorpowered.com/colorbox/core/README).
+* Update ColorBox to v1.3.6 (see [it's changelog](http://colorpowered.com/colorbox/core/README)).
 
 = Version 3.1.2 =
 * Remove IE PNG fixes as they require a full URL and it's not worth the trouble. Works well enough in IE8.
