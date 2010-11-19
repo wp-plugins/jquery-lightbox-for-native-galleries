@@ -12,6 +12,7 @@ Author URI:   http://www.viper007bond.com/
 **************************************************************************/
 
 class jQueryLightboxForNativeGalleries {
+	var $version = '3.2.2';
 	var $themes = array();
 	var $settings = array();
 	var $defaultsettings = array();
@@ -79,7 +80,7 @@ class jQueryLightboxForNativeGalleries {
 
 	// Output the Javascript to create the Lightbox
 	function wp_head() { ?>
-<!-- jQuery Lightbox For Native Galleries v3.1.3 | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
+<!-- jQuery Lightbox For Native Galleries v<?php echo $this->version; ?> | http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/ -->
 <script type="text/javascript">
 // <![CDATA[
 	jQuery(document).ready(function($){
