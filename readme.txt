@@ -2,12 +2,16 @@
 Contributors: Viper007Bond
 Tags: lightbox, jquery, gallery
 Requires at least: 2.6
-Tested up to: 3.1
+Tested up to: 3.4
 Stable tag: trunk
 
 Makes the native WordPress galleries use a lightbox script called ColorBox to display the fullsize images.
 
 == Description ==
+
+**DISCONTINUATION NOTICE:** Development on this plugin has ceased in favor of the carousel module in the <a href="http://wordpress.org/extend/plugins/jetpack/">Jetpack plugin</a>. I recommend you use that plugin instead -- it's much more full featured.
+
+------------------------
 
 Makes the native WordPress galleries use a lightbox script called [ColorBox](http://colorpowered.com/colorbox/) to display the fullsize images right there in the page. No modifications required.
 
@@ -15,9 +19,6 @@ You can also make single non-`[gallery]` images use the lightbox by giving their
 
 `<a href="..." class="lightbox"><img src="..." alt="..." /></a>`
 
-**Demo**
-
-A demo is available at [this plugin's homepage](http://www.viper007bond.com/wordpress-plugins/jquery-lightbox-for-native-galleries/).
 
 == Installation ==
 
